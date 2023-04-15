@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, createContext } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home.jsx';
+import ChatPage from './Pages/ChatPage.jsx';
+import socketIO from 'socket.io-client';
+import './App.css';
+
+const UserContext = createContext();
+
+const socket = socketIO.connect('http://127.0.100.1:5002');   //  <<== Connection via socket.io to the backend socket server
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [userName, setUserName] = useState('');  //  Variable de estado de "nombre del usuario" del chat, controlado por React
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <UserContext.Provider value={userName}>
+      <div className="App">
+        <div>
+          <h1>Hallo World</h1>
+        </div>
+        <BrowserRouter>
+          <div>
+            <Routes>
+              <Route path="/" element={<Home socket={socket} />}></Route>
+              <Route path="/chat" element={<ChatPage socket={socket} />}></Route>
+            </Routes>
+          </div>
+        </BrowserRouter>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    </UserContext.Provider>
+  );
 }
 
-export default App
+export default App;
