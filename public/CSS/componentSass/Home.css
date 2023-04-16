@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap");
+/*   ////////////////////////////////////////       */
+.containerApp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 0%;
+  margin: 0% auto;
+  overflow: hidden;
+  background-image: url("../../assets/images/cool.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.containerApp > .home__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  border-radius: 6px;
+  background: #e0e0e0;
+  box-shadow: inset 11px 11px 24px #c1c1c1, inset -11px -11px 24px #ffffff;
+  width: 30vw;
+  height: auto;
+  margin: 0% auto;
+  padding: 2%;
+  border-radius: 9px 9px 0px 0px;
+}
+.containerApp > .home__container > .headerTitle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0% auto;
+  padding: 2% auto;
+  background-color: transparent;
+  margin: 2% auto;
+  margin-bottom: 4%;
+  padding: 2%;
+}
+.containerApp > .home__container > .headerTitle > .home__header {
+  color: rgb(9, 9, 9);
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 3% auto;
+  text-shadow: -4px -3px 4px rgba(0, 0, 0, 0.39), 2px 3px 4px rgba(0, 0, 0, 0.3);
+  margin: 0% auto;
+}
+.containerApp > .home__container > .contInput {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 6px;
+  background: linear-gradient(315deg, #cacaca, #f0f0f0);
+  box-shadow: -2px -2px 4px #7d7d7d, 2px 2px 4px #ffffff;
+  width: 52%;
+  margin: 4% auto;
+  margin-bottom: 1%;
+  padding: 1%;
+  border-radius: 3px;
+  gap: 1%;
+}
+.containerApp > .home__container > .contInput > .contLabel_icon {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 40%;
+  justify-content: space-between;
+  margin-right: 2%;
+}
+.containerApp > .home__container > .contInput > .contLabel_icon > label {
+  position: relative;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgb(10, 10, 10);
+  margin: 0% 2%;
+  padding: 1%;
+  margin: 0%;
+  padding: 0% 2%;
+}
+.containerApp > .home__container > .contInput > .username__input {
+  position: relative;
+  text-align: justify;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgb(92, 92, 95);
+  margin: 0% auto;
+  margin: 0% auto;
+  padding: 2%;
+  width: 58%;
+  transition: all ease 0.35s;
+}
+.containerApp > .home__container > .contInput > .username__input:hover, .containerApp > .home__container > .contInput > .username__input:focus {
+  cursor: pointer;
+  border: 2px solid rgb(213, 140, 4);
+}
+.containerApp > .home__container > .contButtons {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 52%;
+  justify-content: flex-end;
+}
+
+/*# sourceMappingURL=Home.css.map */

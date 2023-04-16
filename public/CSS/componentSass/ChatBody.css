@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap");
+/*   ////////////////////////////////////////       */
+.contChatBody {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  border-radius: 6px;
+  background: #e0e0e0;
+  box-shadow: inset 11px 11px 24px #c1c1c1, inset -11px -11px 24px #ffffff;
+  width: 25vw;
+  height: 58vh;
+  margin: 0%;
+  padding: 2%;
+  border-radius: 0px 9px 0px 0px;
+}
+.contChatBody > .contTopChatBody {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1% auto;
+  margin: 2% 0%;
+}
+.contChatBody > .contTopChatBody > .headerChatBody {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0% auto;
+  padding: 2% auto;
+  background-color: transparent;
+  width: 68%;
+  margin: 0% auto;
+  padding: 0.5% 0%;
+  margin-bottom: 4%;
+}
+.contChatBody > .contTopChatBody > .headerChatBody > .titelChatBody {
+  color: rgb(9, 9, 9);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 3% auto;
+  text-shadow: -4px -3px 4px rgba(0, 0, 0, 0.39), 2px 3px 4px rgba(0, 0, 0, 0.3);
+  margin: 0% auto;
+  padding: 0%;
+}
+.contChatBody > .contTopChatBody > .contButton {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 25%;
+}
+.contChatBody > .contBottomChatBody {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1% auto;
+  margin: 2% auto;
+  border-radius: 9px;
+  border: 1px solid rgba(167, 166, 166, 0.6);
+}
+.contChatBody > .contBottomChatBody > .contMessages {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border-radius: 6px;
+  background: linear-gradient(315deg, #cacaca, #f0f0f0);
+  box-shadow: -2px -2px 4px #7d7d7d, 2px 2px 4px #ffffff;
+  margin: 0%;
+  height: 45.4vh;
+  background: rgb(253, 253, 253);
+  border: 1px solid rgb(205, 204, 204);
+  overflow-y: scroll;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .theContainerMessYou {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 0%;
+  padding: 0%;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .theContainerMessYou > .messageChatsYou {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  width: 80%;
+  margin: 0%;
+  margin-bottom: 2%;
+  padding: 1%;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .theContainerMessYou > .messageChatsYou > .messageNameSend {
+  position: relative;
+  text-align: justify;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgb(162, 3, 3);
+  margin: 0% auto;
+  font-weight: bold;
+  background-color: transparent;
+  margin: 0%;
+  padding: 2% 3%;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .theContainerMessYou > .messageChatsYou > .contMessageSend {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(to top, rgb(228, 15, 15) 3%, rgb(204, 3, 3) 10%, rgb(151, 1, 1) 21%, rgb(63, 1, 1) 39%, rgb(60, 0, 0) 78%, rgb(45, 1, 1));
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px 2px #ff5757, inset 2px 2px 6px 0px #a80202, 0px 1px 2px 2px #fb3c3c;
+  backdrop-filter: blur(2.7px);
+  -webkit-backdrop-filter: blur(2.7px);
+  border: 1px solid rgba(125, 1, 1, 0.68);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0%;
+  padding: 3%;
+  border-radius: 12px 0px 0px 12px;
+  background-color: rgba(236, 14, 14, 0.2);
+  overflow: auto;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .theContainerMessYou > .messageChatsYou > .contMessageSend > .textMessage {
+  position: relative;
+  text-align: justify;
+  font-size: 0.62rem;
+  font-weight: bold;
+  color: rgb(246, 240, 240);
+  margin: 1% 2%;
+  padding: 1%;
+  background-color: transparent;
+  margin: 0%;
+  padding: 1%;
+  border-radius: 6px;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .theContainerMessShe {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  margin: 0%;
+  padding: 0%;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .theContainerMessShe > .messageChatsShe {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 80%;
+  margin: 0%;
+  margin-bottom: 2%;
+  padding: 1%;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .theContainerMessShe > .messageChatsShe > .messageNameSend {
+  position: relative;
+  text-align: justify;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: rgb(1, 66, 1);
+  margin: 0% auto;
+  font-weight: bold;
+  background-color: transparent;
+  margin: 0%;
+  padding: 2% 3%;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .theContainerMessShe > .messageChatsShe > .contMessageSend {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(to top, rgb(15, 228, 58) 3%, rgb(3, 204, 23) 10%, rgb(1, 151, 31) 21%, rgb(1, 63, 22) 39%, rgb(0, 60, 12) 78%, rgb(1, 45, 10));
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px 2px rgb(86, 205, 2), inset 6px 6px 12px 0px #03fb03, 0px 1px 3px 3px #99f0b6;
+  backdrop-filter: blur(2.7px);
+  -webkit-backdrop-filter: blur(2.7px);
+  border: 1px solid rgba(0, 121, 6, 0.68);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0%;
+  padding: 3%;
+  border-radius: 0px 12px 12px 0px;
+  background-color: rgba(236, 14, 14, 0.2);
+  overflow: auto;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .theContainerMessShe > .messageChatsShe > .contMessageSend > .textMessage {
+  position: relative;
+  text-align: justify;
+  font-size: 0.62rem;
+  font-weight: bold;
+  color: rgb(246, 240, 240);
+  margin: 1% 2%;
+  padding: 1%;
+  background-color: transparent;
+  margin: 0%;
+  padding: 1%;
+  border-radius: 6px;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .messageStatus {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  width: 29%;
+  background-color: rgba(5, 247, 5, 0.3);
+  border-radius: 9px;
+  box-shadow: 6px 8px 12px 2px rgba(167, 253, 105, 0.8), inset 7px 7px 18px 3px rgba(1, 130, 9, 0.9215686275), 6px 6px 12px 9px #053500;
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border: 2px solid rgba(70, 125, 75, 0.38);
+  position: relative;
+  text-align: justify;
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: rgb(9, 9, 9);
+  margin: 1% 2%;
+  padding: 1%;
+  margin: 0.6% auto;
+  padding: 1%;
+  height: auto;
+  background: rgb(253, 253, 253);
+  border-radius: 6px;
+  border: 1px solid rgba(54, 250, 54, 0.9);
+  gap: 2%;
+}
+.contChatBody > .contBottomChatBody > .contMessages > .messageStatusNot {
+  display: none;
+}
+
+/*# sourceMappingURL=ChatBody.css.map */

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import React from "react"
-import '../sass/componentsSass/HeaderComponent.scss'
-import logo from '../images/logo.svg'
+import React from "react";
+import '../sass/componentSass/HeaderComponent.scss';
+import logo from '../assets/react.svg';
 
 
 function HeaderComponent({ title, subtitle }) {
@@ -16,4 +16,4 @@ function HeaderComponent({ title, subtitle }) {
   )
 }
 
-export default HeaderComponent
+export default HeaderComponent;

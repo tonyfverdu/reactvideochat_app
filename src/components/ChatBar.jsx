@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../sass/componentSass/ChatBar.scss';
 
 
 function ChatBar({ socket }) {
@@ -13,12 +14,22 @@ function ChatBar({ socket }) {
 
 
   return (
-    <div className="chat__sidebar">
-      <h2>Open Chat</h2>
-      <div>
-        <h4 className="chat__header">ACTIVE USERS</h4>
-        <div className="chat__users">
-          {usersActivInChat.map((user) => <p key={user.socketID}>{user.user}</p>)}
+    <div className="contChatBar">
+      <header className="headerTitleBar">
+        <h2 className="titleBar">Open Chat</h2>
+      </header>
+      <div className="contBar">
+        <header className='headerActivUsers'>
+          <h4 className="chat__header">ACTIVE USERS</h4>
+        </header>
+        <div className="contChatUsers">
+          {usersActivInChat.map((user, i) => {
+            return (
+              <div key={user.socketID} className="contActivUser">
+                <p className="nameUser">{user.user}<span className="statusUser">on-line</span></p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>

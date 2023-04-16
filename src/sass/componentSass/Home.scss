@@ -1,0 +1,85 @@
+@use '../layouts' as l;
+@use '../myvariables' as v;
+@use '../designElement' as d;
+@use '../neumorphismus' as n;
+@use '../glassMorphismus' as g;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
+.containerApp {
+    @include l.layoutFlexboxColumCenter;
+    width: 100%;
+    height: auto;
+    border-radius: 0%;
+    margin: 0% auto;
+    overflow: hidden;
+    background-image: url('../../assets/images/cool.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &>.home__container {
+        @include l.layoutFlexboxColumCenter;
+        justify-content: flex-start;
+        @include n.neuMorphismus6;
+        width: 30vw;
+        height: auto;
+        margin: 0% auto;
+        padding: 2%;
+        border-radius: 9px 9px 0px 0px;
+
+        &>.headerTitle {
+            @include d.desigHeader (transparent);
+            margin: 2% auto;
+            margin-bottom: 4%;
+            padding: 2%;
+
+            &>.home__header {
+                @include d.desig_H_element (v.$colorTextIni, 1.1rem);
+                margin: 0% auto;
+            }
+        }
+
+        &>.contInput {
+            @include l.layoutFlexboxRowCenter;
+            @include n.neuMorphismus4;
+            width: 52%;
+            margin: 4% auto;
+            margin-bottom: 1%;
+            padding: 1%;
+            border-radius: 3px;
+            gap: 1%;
+
+            &>.contLabel_icon {
+                @include l.layoutFlexboxRowCenter;
+                width: 40%;
+                justify-content: space-between;
+                margin-right: 2%;
+
+                &>label {
+                    @include d.configurationLabel (v.$colorDunkel, 0.8rem);
+                    margin: 0%;
+                    padding: 0% 2%;
+                }
+            }
+
+            &>.username__input {
+                @include d.configurationText1 (v.$backgroundColorDunkelGray2, 0.7rem);
+                margin: 0% auto;
+                padding: 2%;
+                width: 58%;
+                transition: all ease 0.35s;
+
+                &:hover,
+                &:focus {
+                    cursor: pointer;
+                    border: 2px solid v.$colorbackgroudneuOrange;
+                }
+            }
+        }
+
+        &>.contButtons {
+            @include l.layoutFlexboxRowCenter;
+            width: 52%;
+            justify-content: flex-end;
+        }
+    }
+}

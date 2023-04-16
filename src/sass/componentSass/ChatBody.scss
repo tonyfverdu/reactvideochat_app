@@ -1,0 +1,167 @@
+@use '../layouts' as l;
+@use '../myvariables' as v;
+@use '../designElement' as d;
+@use '../neumorphismus' as n;
+@use '../glassMorphismus' as g;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
+.contChatBody {
+  @include l.layoutFlexboxColumCenter;
+  justify-content: flex-start;
+  @include n.neuMorphismus6;
+  width: 25vw;
+  height: 58vh;
+  margin: 0%;
+  padding: 2%;
+  border-radius: 0px 9px 0px 0px;
+
+  &>.contTopChatBody {
+    @include l.layoutFlexboxRowCenter;
+    justify-content: space-between;
+    padding: 1% auto;
+    margin: 2% 0%;
+
+    &>.headerChatBody {
+      @include d.desigHeader (transparent);
+      width: 68%;
+      margin: 0% auto;
+      padding: 0.5% 0%;
+      margin-bottom: 4%;
+
+      &>.titelChatBody {
+        @include d.desig_H_element (v.$colorTextIni, 1rem);
+        margin: 0% auto;
+        padding: 0%;
+      }
+    }
+
+    &>.contButton {
+      @include l.layoutFlexboxRowCenter;
+      width: 25%;
+    }
+  }
+
+  &>.contBottomChatBody {
+    @include l.layoutFlexboxRowCenter;
+    padding: 1% auto;
+    margin: 2% auto;
+    border-radius: 9px;
+    border: 1px solid v.$backgroundColorHellGrayT;
+
+    &>.contMessages {
+      @include l.layoutFlexboxColumCenter;
+      justify-content: flex-start;
+      align-items: flex-end;
+      @include n.neuMorphismus4;
+      margin: 0%;
+      height: 45.4vh;
+      background: v.$backgroundColorIniWhite;
+      border: 1px solid v.$backgroundColorIni2;
+      overflow-y: scroll;
+
+      &>.theContainerMessYou {
+        @include l.layoutFlexboxRowCenter;
+        justify-content: flex-end;
+        margin: 0%;
+        padding: 0%;
+
+        &>.messageChatsYou {
+          @include l.layoutFlexboxRowCenter;
+          justify-content: flex-end;
+          width: 80%;
+          margin: 0%;
+          margin-bottom: 2%;
+          padding: 1%;
+
+          &>.messageNameSend {
+            @include d.configurationText1(v.$colorRedNeuDunkel3, 0.7rem);
+            font-weight: bold;
+            background-color: transparent;
+            margin: 0%;
+            padding: 2% 3%;
+          }
+
+          &>.contMessageSend {
+            @include l.layoutFlexboxRowCenter;
+            @include g.GlassMorphismus10;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin: 0%;
+            padding: 3%;
+            border-radius: 12px 0px 0px 12px;
+            background-color: v.$colorRedHellT3;
+            overflow: auto;
+
+            &>.textMessage {
+              @include d.configurationText2(v.$colorHell, 0.62rem);
+              background-color: transparent;
+              margin: 0%;
+              padding: 1%;
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+
+      &>.theContainerMessShe {
+        @include l.layoutFlexboxRowCenter;
+        justify-content: flex-start;
+        margin: 0%;
+        padding: 0%;
+
+        &>.messageChatsShe {
+          @include l.layoutFlexboxRowCenter;
+          width: 80%;
+          margin: 0%;
+          margin-bottom: 2%;
+          padding: 1%;
+
+          &>.messageNameSend {
+            @include d.configurationText1(v.$colorDunkelGreen, 0.7rem);
+            font-weight: bold;
+            background-color: transparent;
+            margin: 0%;
+            padding: 2% 3%;
+          }
+
+          &>.contMessageSend {
+            @include l.layoutFlexboxRowCenter;
+            @include g.GlassMorphismus9;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin: 0%;
+            padding: 3%;
+            border-radius: 0px 12px 12px 0px;
+            background-color: v.$colorRedHellT3;
+            overflow: auto;
+
+            &>.textMessage {
+              @include d.configurationText2(v.$colorHell, 0.62rem);
+              background-color: transparent;
+              margin: 0%;
+              padding: 1%;
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+
+      &>.messageStatus {
+        @include l.layoutFlexboxRowCenter;
+        width: 29%;
+        @include g.GlassMorphismus6T;
+        @include d.configurationText2(v.$colorTextIni, 0.6rem);
+        margin: 0.6% auto;
+        padding: 1%;
+        height: auto;
+        background: v.$backgroundColorIniWhite;
+        border-radius: 6px;
+        border: 1px solid v.$colorGreenHell;
+        gap: 2%;
+      }
+      &>.messageStatusNot {
+        display:none;
+      }
+    }
+  }
+}

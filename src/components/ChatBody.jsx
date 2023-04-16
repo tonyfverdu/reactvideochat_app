@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
+import { IconContext } from "react-icons";
+import ButtonKlein from './ButtonKlein.jsx';
+
+import '../sass/componentSass/ChatBody.scss';
 
 
 function ChatBody({ messages, userName, lastMessageRef, typingStatus }) {
@@ -27,43 +31,61 @@ function ChatBody({ messages, userName, lastMessageRef, typingStatus }) {
 
 
   return (
-    <>
-      <header className="chat__mainHeader">
-        <p>Hangout with Colleagues</p>
-        <button className="leaveChat__btn" onClick={handleLeaveChat}>
-          LEAVE CHAT
-        </button>
-      </header>
+    <div className="contChatBody">
+      <div className="contTopChatBody">
+        <header className="headerChatBody">
+          <h2 className="titelChatBody">Hangout with Colleagues</h2>
+        </header>
 
-      {/*This shows messages sent from you*/}
-      <div className="message__container">
-        {messages.map((message) =>
-          message.name === localStorage.getItem('userName') ? (
-            <div className="message__chats" key={message.id}>
-              <p className="sender__name">You:  {userName}</p>
-              <div className="message__sender">
-                <p>{message.text}</p>
-              </div>
-            </div>
-          ) : (
-            <div className="message__chats" key={message.id}>
-              <p>{message.name}</p>
-              <div className="message__recipient">
-                <p>{message.text}</p>
-              </div>
-            </div>
-          )
-        )}
-
-        <div className="message__status">
-          <p></p>
-          {isTyping &&
-            <p><FaUser />{` ${isTyping}`}</p>
-          }
+        <div className="contButton">
+          <ButtonKlein
+            handleButton={handleLeaveChat}
+            text="EXIT"
+            parW="4.4rem"
+            parH="2.4rem"
+            parFS="0.8rem"
+          />
         </div>
-        <div ref={lastMessageRef} />
       </div>
-    </>
+
+      <div className="contBottomChatBody">
+        {/*This shows messages sent from you*/}
+        <div className="contMessages">
+          {messages.map((message) =>
+            message.name === localStorage.getItem('userName') ? (
+              <div className="theContainerMessYou">
+                <div className="messageChatsYou" key={message.id}>
+                  <p className="messageNameSend">You {userName}</p>
+                  <div className="contMessageSend">
+                    <p className="textMessage">{message.text}</p>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="theContainerMessShe">
+                <div className="messageChatsShe" key={message.id}>
+                  <div className="contMessageSend">
+                    <p className="textMessage">{message.text}</p>
+                  </div>
+                  <p className="messageNameSend">{message.name}</p>
+                </div>
+              </div>
+            )
+          )}
+
+          {/* <div className="messageStatus"> */}
+          <div className={`typingStatus !== '' ? messageStatus : null`}>
+            <IconContext.Provider value={{ color: "red", className: "global-class-name" }}>
+              <p></p>
+              {isTyping &&
+                <p><FaUser />{` ${isTyping}`}</p>
+              }
+            </IconContext.Provider>
+          </div>
+          <div ref={lastMessageRef} />
+        </div>
+      </div>
+    </div>
   );
 };
 

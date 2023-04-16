@@ -3,6 +3,8 @@ import ChatBar from '../components/ChatBar.jsx';
 import ChatBody from '../components/ChatBody.jsx';
 import ChatFooter from '../components/ChatFooter.jsx';
 
+import '../sass/componentSass/ChatPage.scss';
+
 //  1.- In the Socket.io client ("ChatPage.jsx" component), it "listens" for messages sent through the "messageResponse"
 //  event and distributes the data in the message array (arrayMessages). The "arrayMessages" is passed to the 
 //  ChatBody.jsx" component to be displayed in the user interface.
@@ -35,11 +37,18 @@ function ChatPage({ socket }) {
 
 
   return (
-    <div className="chat">
+    <div className="contChat">
       <ChatBar socket={socket} />
-      <div className="chat__main">
-        <ChatBody messages={messages} lastMessageRef={lastMessageRef} typingStatus={typingStatus} />
-        <ChatFooter socket={socket} />
+      <div className="chatMain">
+        <ChatBody
+          messages={messages}
+          lastMessageRef={lastMessageRef}
+          typingStatus={typingStatus}
+        />
+        <ChatFooter
+          socket={socket}
+          setMessages = {setMessages}
+        />
       </div>
     </div>
   );

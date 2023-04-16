@@ -15,11 +15,6 @@
   font-style: normal;
 }
 
-:root {
-  --youtube-red: red;
-}
-
-
 *,
 *:before,
 *:after {
@@ -35,236 +30,116 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 1%, rgb(102, 1, 1, 0.7) 4%, rgba(255, 0, 0, 0.7) 12%,
       rgb(247, 59, 59, 0.6) 20%, rgba(255, 0, 0, 0.6) 35%, white);
   perspective: 1000px;
   transform-style: preserve-3d;
 }
 
-.contCentral {
-  @include d.designContainerCentral;
-  margin: 0%;
-  width: 100vw;
-  height: 100vh;
-  gap: 0.5%;
 
-  &>.contLogos {
+.containerApp {
+  @include l.layoutFlexboxColumCenter;
+  width: 100%;
+  height: auto;
+  border-radius: 0%;
+  margin: 0% auto;
+  overflow: hidden;
+
+  background-color: v.$backgroundColorIniWhite;
+
+  &>.contIconExit {
     @include l.layoutFlexboxRowCenter;
-    @include g.displayGlassmorphismus;
-    backdrop-filter: blur(1.6px);
-    width: 80%;
-    height: 12vh;
-    padding: 0.5%;
-    margin: 1% auto;
-    margin-bottom: 0.6%;
-    border-radius: 6px;
+    @include n.teclaNeumorphismus1;
+    width: 1.8rem;
+    height: 1.8rem;
+    z-index: 20;
+    position: absolute;
+    top: 0.6%;
+    right: 0.3%;
+    border-radius: 3px;
+    color: v.$colorRedNeuDunkel3;
+    transition: all ease 0.45s;
 
-    &>.headerTitle {
-      @include d.desigHeader (transparent);
-
-      &>.title {
-        @include d.desig_H_element (v.$colorHell, 2.1rem);
-      }
+    &:hover,
+    &:focus {
+      color: v.$colorRedNew;
+      @include n.teclaNeumorphismus1Hover;
+      border-radius: 3px;
+      transform: scale(0.85);
     }
+
+    &>i {
+      z-index: 20;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
   }
 
-  &>.mainProgram {
-    @include l.layoutFlexboxColumCenter;
-    @include g.displayGlassmorphismus;
+  &>.contCentral {
+    @include d.designContainerCentral;
     margin: 0%;
-    padding: 0%;
-    backdrop-filter: blur(1.6px);
-    width: 80%;
-    height: 80vh;
-   
-    border-radius: 6px;
+    width: 100vw;
+    height: 100vh;
+    gap: 1%;
 
-    &>.recognition {
+    &>.containerLogos {
       @include l.layoutFlexboxRowCenter;
-      margin: 0% auto;
-      padding: 0%;
-      gap: 0.3%;
-
-      &>.contWebCam {
-        @include l.layoutFlexboxRowCenter;
+      justify-content: space-between;
+      position: absolute;
+      top: 3%;
+      left: 1%;
+      width: 30%;
+      z-index: 12;
+      gap: 0.1%;
+  
+      &>.MERNFigure {
+        @include d.figure;
+        border-radius: 0%;
         margin: 0% auto;
         padding: 0%;
-        width: 900px;
-        height: 580px;
-        border-radius: 6px;
-      }
-
-      &>.notActivCam {
-        @extend .contWebCam;
-        @include g.GlassMorphismus5;
-      }
-
-      &>.ActivCam {
-        @extend .contWebCam;
-        @include g.GlassMorphismus6;
-      }
-
-      &>.contPhoto {
-        @include n.neuMorphismus3;
-        @include l.layoutFlexboxColumCenter;
-        justify-content: flex-start;
-        margin: auto 2%;
-        margin-left: 0%;
-        width: 490px;
-        height: 580px;
-        border-radius: 6px;
-        gap: 2%;
-
-        &>canvas {
-          @include l.layoutFlexboxRowCenter;
-          width: '190px';
-          height: '280px';
+        background-color: transparent;
+  
+        &>.imageLogo {
+          @include d.imageGenerall;
+          border-radius: 50%;
+          width: 68px;
+          height: 68px;
           margin: 0% auto;
-          margin-top: 3%;
           padding: 0%;
-          border: '2px solid v.$backgroundColorDunkelGray5';
-          border-radius: '6px';
-          background-color: v.$backgroundColorBlack;
-
-          &:nth-child(2) {
-            background: v.$gradientSliceBluedark;
-          }
         }
+      }
+    }
+
+    &>.header-Principal {
+      @include l.layoutFlexboxRowCenter;
+      position: absolute;
+      top:0%;
+      left: 0%;
+      height: 14vh;
+      padding: 0% auto;
+      margin: 0% auto;
+      background-color: v.$colorbackgroudneuOrange;
+      overflow: hidden;
+      z-index: 10;
+  
+      &>h2 {
+        @include d.desig_H_element (v.$colorTextIni, 1.1rem);
+        position: relative;
+        margin: 0% auto;
+        padding: 0%;
       }
     }
   }
 
-  &>.contButtons {
-    @include g.displayGlassmorphismus;
-    @include l.layoutFlexboxRowCenter;
-    width: 80%;
-    height: 10vh;
-    justify-content:flex-start;
-    backdrop-filter: blur(1.6px);
-    margin: 0.5%;
-    margin-bottom: 2%;
-    padding: 0.8% 2%;
-    border-radius: 6px;
-    gap: 5%;
-
-    &>.contCheckboxes {
-      @include l.layoutFlexboxRowCenter;
-      width: 12.6rem;
-      margin: 0%;
-      padding: 1%;
-
-      &>fieldset {
-        @include l.layoutFlexboxRowCenter;
-        margin: 2% auto;
-        padding: 0.3%;
-        border: 1px solid v.$backgroundColorDunkelGray;
-
-        &>legend {
-          @include d.configurationLabel (v.$backgroundColorIni2, 0.5rem);
-          margin: 2% 4%;
-          padding: 0% 2%;
-          text-align: start;
-        }
-
-        &>.contLabel {
-          @include l.layoutFlexboxRowCenter;
-          @include n.teclaNeumorphismus1;
-          width: 90px;
-          margin: 2% auto;
-          padding: 1.6% 3.6%;
-          border-radius: 3px;
-          transition: all ease 0.35s;
-
-          &:hover, &:focus {
-            cursor: pointer;
-            @include n.teclaNeumorphismus1Hover;
-            border-radius: 3px;
-          }
-          &.active {
-            @include n.teclaNeumorphismusGreen;
-            border-radius: 3px;
-          }
-
-          &>.figureIcon {
-            @include d.figure;
-            width: 36px;
-            height: 36px;
-            margin: 0% auto;
-            margin-bottom: 2%;
-            padding: 0%;
-
-            &>.iconRecog {
-              @include l.layoutFlexboxRowCenter;
-              width: 36px;
-              height: 36px;
-              margin: 0% auto;
-              padding: 1%;
-              border: 1px solid 'white';
-            }
-          }
-
-          &>.selectRecog {
-            @include l.layoutFlexboxRowCenter;
-            margin: 0% auto;
-            padding: 0%;
-            transform: scale(2.4);
-          }
-        }
-      }
-    }
-
-    &>.contButtonsSelect {
-      @include l.layoutFlexboxRowCenter;
-      width: 18rem;
-      height: 78px;
-      margin: 0%;
-      margin-top: 1%;
-      padding: 3%;
-      gap: 12%;
-
-      &>.button {
-        @include l.layoutFlexboxRowCenter;
-        margin: 0% 2%;
-      }
-    }
-  }
 }
 
-#myCanvasCamera {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  margin: 0%;
-  padding: 0%;
-  z-index: 100;
-}
-
-a {
+.contNav {
   @include l.layoutFlexboxRowCenter;
-  width: 3.2rem;
-  height: 3.2rem;
   margin: 0% auto;
-  padding: 0% 3%;
-
-  &>img {
-    width: 2.8rem;
-    height: 2.8rem;
-    padding: 2%;
-    fill: v.$backgroundColorIniWhite;
-    stroke: v.$backgroundColorHellGrayT;
-
-    cursor: pointer;
-  }
-}
-
-.react {
-  @extend a;
-  border-radius: 50%;
-  animation: rotate linear 12s infinite forwards;
-
+  margin-top: 6.9%;
+  padding: 1%;
 }
 
 

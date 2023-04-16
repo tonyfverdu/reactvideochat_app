@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap");
+/*   ////////////////////////////////////////       */
+.contChat {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 36vw;
+  height: 48vh;
+}
+.contChat > .chatMain {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  margin: 0% auto;
+  padding: 0%;
+}
+
+/*# sourceMappingURL=ChatPage.css.map */

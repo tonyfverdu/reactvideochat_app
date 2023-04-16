@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap");
+/*   ////////////////////////////////////////       */
+.contChatBar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  border-radius: 6px;
+  background: #e0e0e0;
+  box-shadow: inset 11px 11px 24px #c1c1c1, inset -11px -11px 24px #ffffff;
+  width: 14vw;
+  height: 57.2vh;
+  margin: 0% auto;
+  padding: 2%;
+  border-radius: 9px 0px 0px 9px;
+}
+.contChatBar > .headerTitleBar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0% auto;
+  padding: 2% auto;
+  background-color: transparent;
+  margin: 0% auto;
+  padding: 0.5% auto;
+  margin-bottom: 4%;
+}
+.contChatBar > .headerTitleBar > .titleBar {
+  color: rgb(9, 9, 9);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 3% auto;
+  text-shadow: -4px -3px 4px rgba(0, 0, 0, 0.39), 2px 3px 4px rgba(0, 0, 0, 0.3);
+  margin: 0% auto;
+  padding: 0%;
+}
+.contChatBar > .contBar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  margin: 0%;
+  margin-bottom: 2%;
+  padding: 0.6%;
+  gap: 4%;
+}
+.contChatBar > .contBar > .headerActivUsers {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0% auto;
+  padding: 2% auto;
+  background-color: transparent;
+  justify-content: flex-start;
+  margin: 0%;
+  padding: 4% 0%;
+}
+.contChatBar > .contBar > .headerActivUsers > .chat__header {
+  color: rgb(9, 9, 9);
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin: 3% auto;
+  text-shadow: -4px -3px 4px rgba(0, 0, 0, 0.39), 2px 3px 4px rgba(0, 0, 0, 0.3);
+  margin: 0%;
+  padding: 0%;
+}
+.contChatBar > .contBar > .contChatUsers {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 6px;
+  background: linear-gradient(315deg, #cacaca, #f0f0f0);
+  box-shadow: -2px -2px 4px #7d7d7d, 2px 2px 4px #ffffff;
+  height: 26.4vh;
+  margin: 2% 0%;
+  margin-bottom: 2%;
+  padding: 2%;
+  border-radius: 0px;
+  border: 1px solid rgba(167, 166, 166, 0.6);
+  background: linear-gradient(135deg, #4c4c4c 0%, #595959 11%, #666666 20%, #666666 28%, #474747 36%, #2c2c2c 43%, #2c2c2c 44%, #2c2c2c 47%, #2c2c2c 49%, #000000 52%, #2c2c2c 55%, #000000 60%, #000000 60%, #000000 64%, #111111 72%, #2b2b2b 81%, #1c1c1c 89%, #131313 100%);
+}
+.contChatBar > .contBar > .contChatUsers > .contActivUser {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+}
+.contChatBar > .contBar > .contChatUsers > .contActivUser > .nameUser {
+  position: relative;
+  text-align: justify;
+  font-size: 0.74rem;
+  font-weight: bold;
+  color: rgb(246, 240, 240);
+  margin: 1% 2%;
+  padding: 1%;
+  width: 100%;
+  margin: 0.2% 1%;
+  padding: 1% 2%;
+}
+.contChatBar > .contBar > .contChatUsers > .contActivUser > .nameUser > .statusUser {
+  position: relative;
+  text-align: justify;
+  font-size: 0.45rem;
+  font-weight: bold;
+  color: rgb(103, 255, 2);
+  margin: 1% 2%;
+  padding: 1%;
+  margin: 0%;
+  padding: 0.2% 2%;
+}
+
+/*# sourceMappingURL=ChatBar.css.map */
