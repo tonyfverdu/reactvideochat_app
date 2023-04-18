@@ -27,7 +27,7 @@ function ChatBody({ messages, userName, lastMessageRef, typingStatus }) {
   useEffect(() => {
     setIsTyping('');
     setIsTyping(typingStatus);
-  }, [messages])
+  }, [messages]);
 
 
   return (
@@ -40,7 +40,7 @@ function ChatBody({ messages, userName, lastMessageRef, typingStatus }) {
         <div className="contButton">
           <ButtonKlein
             handleButton={handleLeaveChat}
-            text="EXIT"
+            text="Exit"
             parW="4.4rem"
             parH="2.4rem"
             parFS="0.8rem"
@@ -53,8 +53,8 @@ function ChatBody({ messages, userName, lastMessageRef, typingStatus }) {
         <div className="contMessages">
           {messages.map((message) =>
             message.name === localStorage.getItem('userName') ? (
-              <div className="theContainerMessYou">
-                <div className="messageChatsYou" key={message.id}>
+              <div key={message.id} className="theContainerMessYou">
+                <div className="messageChatsYou">
                   <p className="messageNameSend">You {userName}</p>
                   <div className="contMessageSend">
                     <p className="textMessage">{message.text}</p>
@@ -62,8 +62,8 @@ function ChatBody({ messages, userName, lastMessageRef, typingStatus }) {
                 </div>
               </div>
             ) : (
-              <div className="theContainerMessShe">
-                <div className="messageChatsShe" key={message.id}>
+              <div key={message.id} className="theContainerMessShe">
+                <div className="messageChatsShe">
                   <div className="contMessageSend">
                     <p className="textMessage">{message.text}</p>
                   </div>
@@ -73,8 +73,7 @@ function ChatBody({ messages, userName, lastMessageRef, typingStatus }) {
             )
           )}
 
-          {/* <div className="messageStatus"> */}
-          <div className={`typingStatus !== '' ? messageStatus : null`}>
+          <div className={`${typingStatus !== '' ? 'messageStatus' : null}`}>
             <IconContext.Provider value={{ color: "red", className: "global-class-name" }}>
               <p></p>
               {isTyping &&

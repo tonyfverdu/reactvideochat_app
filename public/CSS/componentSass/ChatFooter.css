@@ -16,7 +16,7 @@
   margin: 0% auto;
   margin-top: 1%;
   padding: 2%;
-  border-radius: 0px 0px 9px 9px;
+  border-radius: 0px;
   gap: 5%;
 }
 .chatFooter > .formFooter {
@@ -27,7 +27,9 @@
   align-items: center;
   width: 100%;
   justify-content: flex-end;
-  gap: 0.3%;
+  margin: 0%;
+  padding: 1% auto;
+  gap: 15%;
 }
 .chatFooter > .formFooter > .messageInput {
   position: relative;
@@ -36,9 +38,9 @@
   font-weight: 400;
   color: rgba(23, 23, 24, 0.85);
   margin: 0% auto;
-  margin: 0% auto;
-  padding: 2% 1%;
-  width: 51%;
+  margin: 0%;
+  padding: 1% 2%;
+  width: 40%;
   height: 2.2rem;
   transition: all ease 0.35s;
 }
@@ -56,7 +58,7 @@
   justify-content: space-between;
   width: 9rem;
   padding: 1% auto;
-  margin: 2% auto;
+  margin: 2%;
   border-radius: 9px;
 }
 

@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
-import '../sass/componentSass/ChatFooter.scss';
+import React, { useState, useEffect } from 'react';
 import ButtonKlein from './ButtonKlein.jsx';
 
+import '../sass/componentSass/ChatFooter.scss';
 
-function ChatFooter({ socket, setMessages }) {
+
+function ChatFooter({ socket, setMessages, emoji }) {
   const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    setMessage(message=> message + ' ' + emoji);
+  }, [emoji], [message]);
 
   //  Activation of the "typing" event each time a user types in the text field (input type="text").
   const handleTyping = () => {
@@ -32,7 +37,7 @@ function ChatFooter({ socket, setMessages }) {
   }
 
   function handleSubmitButton() {
-    console.log('submit');
+    // console.log('submit');
   };
 
 
@@ -43,6 +48,7 @@ function ChatFooter({ socket, setMessages }) {
           onChange={(ev) => setMessage(ev.target.value)}
           onKeyDown={handleTyping}
         />
+
         <div className="contButton">
           <ButtonKlein
             handleButton={handleDeleteButton}
@@ -59,7 +65,6 @@ function ChatFooter({ socket, setMessages }) {
             parFS="0.8rem"
           />
         </div>
-        {/* <button className="sendBtn">SEND</button> */}
       </form>
     </div>
   );

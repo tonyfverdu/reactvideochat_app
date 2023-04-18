@@ -14,26 +14,28 @@
   margin: 0% auto;
   margin-top: 1%;
   padding: 2%;
-  border-radius: 0px 0px 9px 9px;
+  border-radius: 0px;
   gap: 5%;
 
   &>.formFooter {
     @include l.layoutFlexboxRowCenter;
     justify-content: flex-end;
-    gap: 0.3%;
+    margin: 0%;
+    padding:1% auto;
+    gap: 15%;
 
     &>.messageInput {
       @include d.configurationText1 (v.$backgroundColorDunkelGray3, 0.7rem);
-      margin: 0% auto;
-      padding: 2% 1%;
-      width: 51%;
+      margin: 0%;
+      padding: 1% 2%;
+      width: 40%;
       height: 2.2rem;
       transition: all ease 0.35s;
 
       &:hover,
       &:focus {
-          cursor: pointer;
-          border: 2px solid v.$colorbackgroudneuOrange;
+        cursor: pointer;
+        border: 2px solid v.$colorbackgroudneuOrange;
       }
     }
 
@@ -42,7 +44,7 @@
       justify-content: space-between;
       width: 9rem;
       padding: 1% auto;
-      margin: 2% auto;
+      margin: 2%;
       border-radius: 9px;
     }
   }
